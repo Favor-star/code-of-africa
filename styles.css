@@ -1,5 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Saira+Condensed:wght@500;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Sofia+Sans+Extra+Condensed:ital,wght@0,700;1,700&display=swap");
 *,
 *::before,
 *::after {
@@ -11,6 +11,7 @@ body {
   width: 100vw;
   height: 100vh;
   display: flex;
+  padding: 0 40px;
   flex-direction: row;
   align-items: center;
   justify-content: center;
@@ -20,9 +21,11 @@ main {
   display: flex;
   flex-direction: row;
   gap: 3px;
+  width: 100%;
+  max-width: 1178px;
 }
 .img__container {
-  width: 293px;
+  flex: 1;
   height: 588px;
   position: relative;
   overflow: hidden;
@@ -51,7 +54,7 @@ main {
   gap: 10px;
   backdrop-filter: blur(0px);
   padding: 40px;
-  padding-bottom: 30px;
+  padding-bottom: 20px;
   transition: all ease-in-out 300ms;
 }
 
@@ -70,10 +73,12 @@ main {
   font-weight: 800;
   font-size: 32px;
   align-self: baseline;
-  font-family: "Saira Condensed", sans-serif;
+  font-family: "Sofia Sans Extra Condensed", sans-serif;
+  font-optical-sizing: auto;
   font-weight: 700;
   font-style: normal;
   transform: translateY(20px);
+  color: white;
 }
 
 .subtitle {
@@ -85,6 +90,7 @@ main {
   line-height: 16.02px;
   text-align: left;
   transform: translateY(15px);
+  color: white;
 }
 .overlay:hover .title {
   transform: translateY(0px);
@@ -111,4 +117,19 @@ main {
 .overlay:hover .button {
   visibility: visible;
   transition: visibility ease-in-out 300ms;
+}
+
+@media screen and (max-width: 800px) {
+  body {
+    padding: 10px;
+  }
+  .title,
+  .subtitle,
+  .button {
+    display: none;
+  }
+  .img__container {
+    width: 98.5px;
+    height: 600px;
+  }
 }
